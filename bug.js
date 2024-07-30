@@ -7,7 +7,7 @@ For each of the following assignments, there is one intentional error. Your task
    const BASE_URL = 'https://api.example.com/v1';
    const API_KEY = 'your-api-key-here';
 
-   API_KEY = 'new-api-key'; // This line should cause an error
+   API_KEY : 'new-api-key'; // This line should cause an error
 
    console.log(BASE_URL);
    console.log(API_KEY);
@@ -16,7 +16,7 @@ For each of the following assignments, there is one intentional error. Your task
 2. **Simple API URL Constructor (Error: Missing base URL)**
    ```javascript
    function constructApiUrl(endpoint) {
-     return `/${endpoint}`;
+     return `${endpoint}`;
    }
 
    console.log(constructApiUrl('weather'));
@@ -33,7 +33,7 @@ For each of the following assignments, there is one intentional error. Your task
      error: null
    };
 
-   console.log(JSON.stringify(apiResponse, null, 2));
+   console.log(JSON.stringify(apiResponse, null));
    ```
 
 4. **API Endpoints Array (Error: Duplicate endpoint)**
@@ -41,7 +41,6 @@ For each of the following assignments, there is one intentional error. Your task
    const weatherEndpoints = [
      'current',
      'forecast',
-     'current',
      'alerts'
    ];
 
@@ -57,7 +56,7 @@ For each of the following assignments, there is one intentional error. Your task
      };
    }
 
-   const weatherData = { temperature: 25, humidity: 70 };
+   const weatherData = { temperature: 25, humid: 70 };
    console.log(simplifyWeatherData(weatherData));
    ```
 
